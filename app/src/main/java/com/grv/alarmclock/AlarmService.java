@@ -49,4 +49,14 @@ public class AlarmService extends IntentService {
         alarmNotificationManager.notify(1, alamNotificationBuilder.build());
         Log.d("AlarmService", "Notification sent.");
     }
+
+    @Override
+    public void onDestroy() {
+
+    }
+
+    @Override
+    public void onTaskRemoved(Intent rootIntent) {
+        super.onTaskRemoved(rootIntent);
+    }
 }
